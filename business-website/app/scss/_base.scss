@@ -1,0 +1,130 @@
+body {
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 80vw;
+    max-width: 1000px;
+    min-width: 760px;
+    margin: 0 auto;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2em;
+    width:70vw;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-image: url("images/bg-masthead.jpg");
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1, h2 {
+        color: white;
+    }
+}
+
+.mini-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .cell {
+        width: 30%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 70px;
+    }
+}
+
+main {
+    .row {
+        display: flex;
+        justify-content: center;
+    
+        img {
+            width: 50%;
+            align-self: center;
+        }
+
+        article {
+            padding: 0 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .row:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .row:nth-child(even) {
+            flex-flow: row wrap;
+        }
+    
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 250px;
+    
+            img {
+                border-radius: 50%;
+                width: 120px;
+            }
+        
+        }
+    
+    
+        figcaption {
+            font-weight: bold;
+        }
+    
+        q {
+            font-style: italic;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        width: 95vw;
+        min-width: auto;
+    }
+
+    main .row, main .row:nth-child(even) {
+        flex-flow: column nowrap;
+
+        img {
+            width:auto;
+        }
+    }
+}
