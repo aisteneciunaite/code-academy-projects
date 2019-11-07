@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Mock business website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mock business website">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,9 +45,12 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae veritatis tenetur nostrum tempora, ad deserunt officia quam, fugit quos possimus iure! Facere cupiditate quaerat voluptates officia maxime maiores eos ullam.</p>
                 </article>
                 <img srcset="/images/bg-showcase-1-300w.jpg 300w,
-                            /images/bg-showcase-1-500w.jpg 500w"
-                    sizes="(max-width: 700px) 300px,
-                            500px"
+                            /images/bg-showcase-1-500w.jpg 500w,
+                            images/bg-showcase-1.jpg 700w"
+                            sizes="(max-width: 300px) 300px,
+                            (max-width: 500px) 500px,
+                            (min-width: 780px) 500px,
+                            700px"
                     src="images/bg-showcase-1.jpg" alt="">
             </div>
             <div class="row">
@@ -52,10 +58,14 @@
                     <h2>Updated for bootstrap 4</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae veritatis tenetur nostrum tempora, ad deserunt officia quam, fugit quos possimus iure! Facere cupiditate quaerat voluptates officia maxime maiores eos ullam.</p>
                 </article>
+                <!-- <img src="images/bg-showcase-2.jpg" alt=""> -->
                 <img srcset="/images/bg-showcase-2-300w.jpg 300w,
-                            /images/bg-showcase-2-500w.jpg 500w"
-                    sizes="(max-width: 700px) 300px,
-                            500px"
+                            /images/bg-showcase-2-500w.jpg 500w,
+                            images/bg-showcase-2.jpg 700w"
+                    sizes="(max-width: 300px) 300px,
+                            (max-width: 500px) 500px,
+                            (min-width: 780px) 500px,
+                            700px"
                 src="images/bg-showcase-2.jpg" alt="">
             </div>
             <div class="row">
@@ -64,9 +74,12 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae veritatis tenetur nostrum tempora, ad deserunt officia quam, fugit quos possimus iure! Facere cupiditate quaerat voluptates officia maxime maiores eos ullam.</p>
                 </article>
                 <img srcset="/images/bg-showcase-3-300w.jpg 300w,
-                            /images/bg-showcase-3-500w.jpg 500w"
-                     sizes="(max-width: 700px) 300px,
-                            500px"
+                            /images/bg-showcase-3-500w.jpg 500w,
+                            images/bg-showcase-3.jpg 700w"
+                            sizes="(max-width: 300px) 300px,
+                            (max-width: 500px) 500px,
+                            (min-width: 780px) 500px,
+                            700px"
                     src="images/bg-showcase-3.jpg" alt="">
             </div>
             <div class="testimonials">
@@ -104,14 +117,15 @@
                     <a href="">Contact</a>
                     <a href="">Terms Of Use</a>
                     <a href="">Privacy Policy</a>
-                    <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                    
                 </nav>
-                <p>c Your website 2019. All rights reserved.</p>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                <span>© Your website 2019. All rights reserved.</span>
             </div>
             <div class="social">
-                <a href="">FB icon</a>
-                <a href="">twitter icon</a>
-                <a href="">Insta icon</a>
+                <a href=""><img src="https://img.icons8.com/nolan/64/000000/facebook-circled.png"></a>
+                <a href=""><img src="https://img.icons8.com/nolan/64/000000/instagram-new.png"></a>
+                <a href=""><img src="https://img.icons8.com/nolan/64/000000/twitter.png"></a>
             </div>
         </footer>
     </div>
