@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -19,26 +20,30 @@
         </nav>
     </header>
     <main>
-        <section id="hero">
+        <section id="hero" class="row">
             <article>
                 <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
                 <h2>Explained propriety of out perpetual to you</h2>
                 <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
-                <button>Download</button>
+                <button>DOWNLOAD</button>
             </article>
             <form>
-                <div class="form-head"></div>
-                <h3>Your details</h3>
-                <input type="text" name="First Name" id="f-name" placeholder="First Name">
-                <input type="text" name="First Name" id="l-name" placeholder="Last Name">
-                <input type="tel" name="Phone number" id="p-number" placeholder="Phone number">
-                <h3>Type of subscription</h3>
-                <input type="radio" name="subsctiprion-type" id="r-monthly"><label for="r-monthly">MONTHLY</label>
-                <input type="radio" name="subsctiprion-type" id="r-yearly"><label for="r-yearly">YEARLY</label>
-                <input type="submit" value="Get Started">
+                <div class="form-head row"><h4>Try your <span class="highlight">FREE</span> Trial Today</h4></div>
+                <div class="form-body">
+                    <h5>Your details</h5>
+                    <input type="text" name="First Name" id="f-name" placeholder="First Name">
+                    <input type="text" name="First Name" id="l-name" placeholder="Last Name">
+                    <input type="tel" name="Phone number" id="p-number" placeholder="Phone number">
+                    <h5>Type of subscription</h5>
+                    <div class="row">
+                        <input type="radio" name="subsctiprion-type" id="r-monthly"><label for="r-monthly">MONTHLY</label>
+                        <input type="radio" name="subsctiprion-type" id="r-yearly"><label for="r-yearly">YEARLY</label>
+                    </div>
+                </div>
+                <input class="btn-big" type="submit" value="Get Started">
             </form>
         </section>
-        <div class="social row">
+        <div class="social row bkg-w">
             <div>
                 <h3>Social Media</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
@@ -51,7 +56,7 @@
                 <a href=""><img src="" alt="rss"></a>
             </div>
         </div>
-        <section id="features">
+        <section id="features row">
             <div class="col">
                 <div class="square"></div>
                 <div class="square"></div>
@@ -67,7 +72,7 @@
                 <div class="rectangle"></div>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="bkg-b">
             <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
             <article>
                 <h2>Erat tempor tempus erat malesuada</h2>
@@ -78,7 +83,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
             </article>
         </section>
-        <section>
+        <section class="bkg-w">
             <h2>WHY THIS IS AWESOME</h2>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             <div class="row">
@@ -99,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <section id="pricing">
+        <section id="pricing" class="bkg-blue">
             <h2>PRICING OPTIONS</h2>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             <div class="row">
@@ -138,7 +143,7 @@
                 </div>
             </div>
         </section>
-        <section id="reviews">
+        <section id="reviews" class="bkg-w">
             <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
             <div class="row">
                 <div class="review"></div>
@@ -146,16 +151,17 @@
                 <div class="review"></div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="bkg-orange">
             <h2>CONTACT US</h2>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             <form>
                 <input type="text" name="First Name" id="f-name" placeholder="First Name">
                 <input type="text" name="First Name" id="l-name" placeholder="Last Name">
                 <input type="tel" name="Phone number" id="p-number" placeholder="Phone number">
-                <input type="radio" name="contact" id="personal"><label for="personal">PERSONAL</label>
-                <input type="radio" name="contact" id="company"><label for="company">COMPANY</label>
-                <input type="submit" value="Send">
+                <div class="row">
+                    <input type="radio" name="contact" id="personal"><label for="personal">PERSONAL</label>
+                    <input type="radio" name="contact" id="company"><label for="company">COMPANY</label>                </div>
+                <input class="btn-small"type="submit" value="Send">
             </form>
         </section>
     </main>

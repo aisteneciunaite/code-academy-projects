@@ -1,0 +1,72 @@
+
+$light-grey: #D8D8D8;
+$form-content-width: 260px;
+$form-width: 360px;
+
+form {
+    background-color: white;
+    display: inline-block;
+    width: $form-width;
+    border-radius: 5px;
+    box-shadow: 0px 5px 6px #00000029;
+
+    .form-head {
+        width: $form-width;
+        background-color: #F5F5F5;
+        font-size: 20px;
+        font-weight: 600;
+        height: 57px;
+        border-radius: 5px 5px 0px 0px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .highlight {
+        color: $color-orange;
+    }
+    .form-body {
+        padding: 30px 50px;
+        width: $form-content-width;
+
+    }
+    h5 {
+        font-size: 16px;
+        font-weight: 600;
+        // margin: 30px 0;
+    }
+    input::placeholder {
+        color: $light-grey;
+    }
+    input[type=text], input[type=tel] {
+        border-color: transparent transparent $light-grey transparent;
+        border-width: 1px;
+        padding: 2px 10px;
+        margin: 15px 0;
+    }
+
+    label {
+        font-size: 9px;
+        font-weight: 600;
+        align-self: center;
+    }
+
+    .btn-big {
+        background-color: $color-green;
+        border: none;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        height: 57px;
+        border-radius: 0px 0px 5px 5px;
+        text-transform: uppercase;
+    }
+
+    .btn-small {
+        background-color: $color-green;
+        border: none;
+        color: #FFFFFF;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
