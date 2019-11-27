@@ -2,13 +2,15 @@ $color-green: #41D395;
 $color-blue: #6696E2;
 $color-orange: #E27866;
 $header-height: 72px;
+$content-padding: 50px;
+
 
 
 body {
     background-color: rgb(136, 136, 136);
     max-width: 1400px;
     margin: auto;
-    
+    position: relative;
 }
 
 header {
@@ -17,8 +19,9 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
     height: $header-height;
     z-index: 2;
     img {
@@ -49,8 +52,13 @@ main {
     
     section {
         border: 2px solid purple;
+        padding: $content-padding;
     }
 
+}
+
+main>*{
+    padding: 0 $content-padding;
 }
 
 #hero {
@@ -84,4 +92,16 @@ main {
     }
 
 
+}
+
+
+
+#features {
+    background-position: bottom;
+    background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 90%
+      ),url('assets/christoffer-engstrom-503481-unsplash.png');
+}
+
+footer {
+    padding: 0 $content-padding;
 }

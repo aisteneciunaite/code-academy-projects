@@ -5,7 +5,8 @@ $form-width: 360px;
 
 form {
     background-color: white;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: $form-width;
     border-radius: 5px;
     box-shadow: 0px 5px 6px #00000029;
@@ -68,5 +69,8 @@ form {
         font-size: 15px;
         font-weight: 600;
         text-transform: uppercase;
+        height: 48px;
+        width: 158px;
+        border-radius: 5px;
     }
 }

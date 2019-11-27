@@ -1,6 +1,9 @@
 
+//various reusable classes
+
 .row {
     display: flex;
+    align-items: center;
 }
 
 .col {
@@ -29,3 +32,10 @@
     background-color: $color-blue;
 }
 
+.sc-tall {
+    min-height: 70vh;
+}
+
+.sc-medium {
+    min-height: 45vh;
+}
