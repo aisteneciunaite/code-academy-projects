@@ -1,10 +1,9 @@
 $color-green: #41D395;
 $color-blue: #6696E2;
 $color-orange: #E27866;
+$color-darkgrey: #1C1C1C;
 $header-height: 72px;
-$content-padding: 50px;
-
-
+$content-padding: 0;
 
 body {
     background-color: rgb(136, 136, 136);
@@ -13,8 +12,13 @@ body {
     position: relative;
 }
 
+li {
+    list-style: none;
+    padding: .5em;
+}
+
 header {
-    background-color: #1C1C1C;
+    background-color: $color-darkgrey;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -24,6 +28,7 @@ header {
     box-sizing: border-box;
     height: $header-height;
     z-index: 2;
+    padding: 0 $content-padding;
     img {
         height: 52px;
         margin: 10px;
@@ -36,6 +41,7 @@ header {
             color: #FFFFFF;
             opacity: .69;
             display: inline-block;
+            border-bottom: 2px solid transparent;
             line-height: $header-height;
         }
 
@@ -51,8 +57,9 @@ main {
     
     
     section {
-        border: 2px solid purple;
-        padding: $content-padding;
+        padding-top: 50px;
+        padding-bottom: 50px
+
     }
 
 }
@@ -63,6 +70,7 @@ main>*{
 
 #hero {
     background-position: center;
+    background-repeat: no-repeat;
     background: linear-gradient(
         rgba(28, 28, 28, .63), 
         rgba(28, 28, 28, .63)
@@ -95,11 +103,87 @@ main>*{
 }
 
 
-
 #features {
     background-position: bottom;
-    background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 90%
+    background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 100%
       ),url('assets/christoffer-engstrom-503481-unsplash.png');
+
+    .square {
+        height: 100px;
+        width: 100px;
+        background-color: $color-orange;
+        margin: 10px;
+        justify-content: center;
+
+        div {
+            display: inline-block;
+            transform: rotate(-45deg);
+            transform-origin: center;
+        }
+    }
+
+    article {
+        align-self: flex-start;
+        justify-content: space-between;
+        align-self: stretch;
+        margin: 0 10px;
+    }
+    .galery {
+        margin: 0 20px;
+    }
+}
+
+#about {
+    article {
+        margin-left: 20px;
+        flex-basis: 450px;
+        h2 {
+            position: relative;
+        }
+
+        h2:after {
+            content:"";
+            border-bottom: 2px solid  $color-orange;
+            width: 200px;
+            display: block;
+            position: absolute;
+            left: 0;
+            margin-top: .25em;
+        }
+    }
+}
+
+#bragging {
+    .underlined:after {
+        border-bottom: 2px solid $color-orange;
+    }
+    .card {
+        max-width: 280px;
+        align-items: center;
+    }
+}
+
+#pricing {
+    .underlined:after {
+        border-bottom: 2px solid $color-green;
+    }
+}
+
+#reviews {
+    .underlined:after {
+        border-bottom: 2px solid $color-blue;
+    }
+}
+
+#contact {
+    form {
+        align-self: center;
+    }
+
+    .underlined {
+        border-bottom: 2px solid $color-orange;
+    }
 }
 
 footer {

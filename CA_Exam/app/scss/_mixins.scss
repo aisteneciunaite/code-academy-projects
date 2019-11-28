@@ -1,6 +1,9 @@
 
 //various reusable classes
 
+
+/* flex options */
+
 .row {
     display: flex;
     align-items: center;
@@ -10,6 +13,24 @@
     display: flex;
     flex-direction: column;
 }
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.stretch {
+    justify-content: stretch;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* background colors */
 
 .bkg-w {
     background-color: #FFFFFF;
@@ -32,10 +53,73 @@
     background-color: $color-blue;
 }
 
+/* section heights */
+
 .sc-tall {
     min-height: 70vh;
 }
 
 .sc-medium {
-    min-height: 45vh;
+    min-height: 55vh;
+}
+
+/*Other*/
+
+.ta-center {
+    text-align: center;
+}
+
+.tc-white {
+    color: white
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    margin: 0 auto;
+}
+
+/*underline class*/
+
+.underlined:after {
+    content:"";
+    width: 64px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 0.25em;
+}
+
+/*chat bubble class*/
+
+.msg-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    max-width: 273px;
+
+    p {
+        background-color: $color-blue;
+        display: inline-block;
+        position: relative;
+        padding: 15px;
+        border-radius: 8px;
+        order: 1;
+    }
+}
+
+.msg-container:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    left: 13px;
+    border-top: 20px solid $color-blue;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-radius: 2px;
 }

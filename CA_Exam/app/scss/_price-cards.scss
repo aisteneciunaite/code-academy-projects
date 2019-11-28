@@ -1,0 +1,46 @@
+.price-card {
+    border-radius: 5px;
+    background-color: white;
+    justify-self: space-between;
+    align-self: flex-start;
+    text-align: center;
+    min-width: 343px;
+    margin:10px;
+    padding-bottom: 1em;
+    
+    .card-top {
+        color: white;
+        background-color: $color-darkgrey;
+        padding-top: 1em;
+        
+        &:after{
+        content:"";
+        display: block;
+        border-bottom: 6px solid $color-green;
+        width: 100%;
+        background-color: $color-green;
+        margin-top: 1em;
+        }
+    }
+
+    .popular:after {
+       content: "OUR MOST POPULAR";
+       border-top: 6px solid $color-green;
+       font-size: 14px;
+    }
+
+    &>:first-child {
+    border-radius : 5px 5px 0 0;
+    }
+
+    
+}
+
+.price {
+    font-size: 94px;
+
+    &:before {
+        content: "$";
+        font-size: 28px;
+    }
+}
