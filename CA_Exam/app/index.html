@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -14,11 +15,11 @@
         <div class="container space-between">
             <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
             <nav class="top-nav">
-                <a href="#">Features</a>
-                <a href="#">About</a>
-                <a href="#">Pricing</a>
-                <a href="#">Reviews</a>
-                <a href="#">Contact</a>
+                <a href="#features" data-target="features">Features</a>
+                <a href="#about" data-target="about">About</a>
+                <a href="#pricing" data-target="pricing">Pricing</a>
+                <a href="#reviews" data-target="reviews">Reviews</a>
+                <a href="#contact" data-target="contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -66,9 +67,12 @@
         <section id="features" class="row sc-medium tc-white">
             <div class="container row stretch">
                 <div class="col">
-                    <div class="square row"><div>REGISTER</div></div>
-                    <div class="square row"><div>APPLY</div></div>
-                    <div class="square row"><div>RECEIVE</div></div>
+                    <div class="square row" data-aos="flip-left"
+                    data-aos-duration="1000"><div>REGISTER</div></div>
+                    <div class="square row" data-aos="flip-left"
+                    data-aos-duration="1000"><div>APPLY</div></div>
+                    <div class="square row" data-aos="flip-left"
+                    data-aos-duration="1000"><div>RECEIVE</div></div>
                 </div>
                 <article class="col space-between">
                     <h2>Tabs with soft transitioning effect. Explained propriety of out perpetual his you.</h2>
@@ -111,7 +115,7 @@
                     <h2 class="underlined">WHY THIS IS AWESOME</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </article>
-                <div class="row space-between">
+                <div class="row space-around wrap">
                     <div class="col card">
                         <img src="assets/Ribbon.svg" alt="ribbon" class="icon-medium">
                         <h4>Thoughtful Design</h4>
@@ -137,7 +141,7 @@
                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                 </article>
                 <div class="row space-around wrap">
-                    <div class="price-card">
+                    <div class="price-card" data-aos="zoom-in" data-aos-anchor-placement="top-center">
                     <div class="card-top">
                         <h4>Basic</h4>
                         <p class="price">0</p>
@@ -152,7 +156,7 @@
                         <li>EMAIL SUPPORT</li>
                     </ul>
                     </div>
-                    <div class="price-card">
+                    <div class="price-card" data-aos="zoom-in" data-aos-anchor-placement="top-center">
                     <div class="card-top popular">
                         <h4>Professional</h4>
                         <p class="price">19</p>
@@ -167,7 +171,7 @@
                         <li>EMAIL SUPPORT</li>
                     </ul>
                     </div>
-                    <div class="price-card">
+                    <div class="price-card" data-aos="zoom-in" data-aos-anchor-placement="top-center">
                     <div class="card-top">
                         <h4>Enterprise</h4>
                         <p class="price">70</p>
@@ -188,7 +192,7 @@
         <section id="reviews" class="bkg-w sc-medium">
             <div class="container col">
                 <h2 class="ta-center underlined">WHAT OUR CUSTOMERS ARE SAYING</h2>
-                <div class="row space-between">
+                <div class="row space-around wrap">
                     <div class="review col">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
@@ -261,34 +265,10 @@
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: false,
-      
-      breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 2,
-            spaceBetween: 30
-            },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 3,
-            spaceBetween: 40
-            }},  
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })
-    </script>
+        AOS.init();
+</script>
+<script src="script.js"></script>
 </html>
