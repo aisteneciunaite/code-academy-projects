@@ -1,4 +1,5 @@
-// Scroll section into view
+/*Scroll section into view*/ 
+
 //create event listeners
 //on click
 //identify clicked section id
@@ -13,3 +14,14 @@ for (let index = 0; index < arr.length; index++) {
     })    
 }
 
+
+
+/* <!-- Initialize Swiper --> */
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
