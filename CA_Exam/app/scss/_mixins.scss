@@ -127,3 +127,33 @@
     border-right: 20px solid transparent;
     border-radius: 2px;
 }
+
+.content-overlay {
+    position: relative;
+    display: inline-block;
+
+    &:after{
+        content:"Explore";
+        background-color: rgba(226, 120, 102, .8);
+        box-sizing: border-box;
+        padding-top: 90px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s;      
+    }
+    &:hover:after{
+        opacity: 1;
+    }
+
+
+
+
+}
