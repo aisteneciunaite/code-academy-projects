@@ -11,28 +11,35 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="row">
+    <header class="row space-between al-center">
         <div class="container space-between">
             <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
-            <nav class="top-nav">
+                <input type="checkbox" id="mobile-menu-btn">
+                <label class="menu-button" for="mobile-menu-btn" class="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+            <nav class="menu">
                 <a href="#features" data-target="features">Features</a>
                 <a href="#about" data-target="about">About</a>
                 <a href="#pricing" data-target="pricing">Pricing</a>
                 <a href="#reviews" data-target="reviews">Reviews</a>
                 <a href="#contact" data-target="contact">Contact</a>
             </nav>
+
         </div>
     </header>
     <main>
-        <section id="hero" class="row sc-tall">
-            <div class="container">
-                <article>
+        <section id="hero" class="sc-tall">
+            <div class="container row">
+                <article class="tc-white">
                     <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
                     <h2>Explained propriety of out perpetual to you</h2>
                     <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
-                    <button>DOWNLOAD</button>
+                    <button class="button-transparent">DOWNLOAD</button>
                 </article>
-                <form class="col space-between">
+                <form class="col space-between slide-out closed" id="subscription-form">
                     <div class="form-head row"><h4>Try your <span class="highlight">FREE</span> Trial Today</h4></div>
                     <div class="form-body col">
                         <h5>Your details</h5>
@@ -40,16 +47,26 @@
                         <input type="text" name="First Name" id="l-name" placeholder="Last Name">
                         <input type="tel" name="Phone number" id="p-number" placeholder="Phone number">
                         <h5>Type of subscription</h5>
-                        <div class="row">
-                            <input type="radio" name="subsctiprion-type" id="r-monthly"><label for="r-monthly">MONTHLY</label>
-                            <input type="radio" name="subsctiprion-type" id="r-yearly"><label for="r-yearly">YEARLY</label>
+                        <div class="row custom-radio">
+                            <input type="radio" name="subsctiprion-type" id="r-monthly">
+                            <label for="r-monthly">
+                                <div class="radio-circle"></div>
+                                <span>MONTHLY</span>
+                            </label>
+                            <input type="radio" name="subsctiprion-type" id="r-yearly">
+                            <label for="r-yearly">
+                                <div class="radio-circle"></div>
+                                <span>YEARLY</span>
+                            </label>
                         </div>
                     </div>
-                    <input class="btn-big" type="submit" value="Get Started">
+                    <input class="btn-big" type="button" value="Get Started">
+                    <button type="button" id="sub-form-tgl" class="btn-form-toggle">&lt;</button>
                 </form>
+
             </div>
         </section>
-        <div class="social row bkg-w">
+        <div id="social" class="row bkg-w">
             <div class="container row space-between">
                 <div>
                     <h3>Social Media</h3>
@@ -111,11 +128,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div> 
         </section>
         <section id="about" class="bkg-b sc-medium">
             <div class="container row space-around wrap">
-                <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
+                <div><img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo"></div>
                 <article>
                     <h2>Erat tempor tempus erat malesuada</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
@@ -221,7 +242,7 @@
                 <h2 class="ta-center underlined ">WHAT OUR CUSTOMERS ARE SAYING</h2>
 
                 <div class="row grow swiper-wrapper">
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                         </div>
@@ -233,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
                         </div>
@@ -245,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                         </div>
@@ -257,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                         </div>
@@ -269,7 +290,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
                         </div>
@@ -281,7 +302,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review col swiper-slide">
+                    <div class="col swiper-slide al-center">
                         <div class="msg-container tc-white">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                         </div>
@@ -310,10 +331,19 @@
                         <input type="text" name="First Name" id="f-name" placeholder="First Name">
                         <input type="text" name="First Name" id="l-name" placeholder="Last Name">
                         <input type="tel" name="Phone number" id="p-number" placeholder="Phone number">
-                        <div class="row">
-                            <input type="radio" name="contact" id="personal"><label for="personal">PERSONAL</label>
-                            <input type="radio" name="contact" id="company"><label for="company">COMPANY</label>                </div>
-                        <input class="btn-small"type="submit" value="Send">
+                        <div class="row custom-radio">
+                            <input type="radio" name="contact" id="personal">
+                            <label for="personal">
+                                <div class="radio-circle"></div>
+                                <span>PERSONAL</span>
+                            </label>
+                            <input type="radio" name="contact" id="company">
+                            <label for="company">
+                                <div class="radio-circle"></div>
+                                <span>COMPANY</span>
+                            </label>
+                        </div>
+                        <input class="btn-small" type="button" value="Send">
                     </div>
                 </form>
             </div>
@@ -332,6 +362,9 @@
         </div>
     </footer>
 </body>
+
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script>

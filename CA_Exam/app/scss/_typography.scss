@@ -39,3 +39,21 @@ p, li {
 p {
     margin-bottom: 20px;
 }
+
+@media (max-width: $break-point4) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+}

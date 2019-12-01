@@ -3,32 +3,38 @@ $color-blue: #6696E2;
 $color-orange: #E27866;
 $color-darkgrey: #1C1C1C;
 $header-height: 72px;
+$break-point1: 900px; // Change feature slides navigation
+$break-point2: 850px; // Change feature slides layout
+$break-point3: 800px; // Mobile & tablet layout
+$break-point4: 500px; // Shrink header fonts
+$break-point5: 400px; // For small mobile screens
+
+html {
+    img {
+        max-width: 100%;
+    }
+    
+    body {
+        max-width: 1400px;
+        margin: auto;
+        position: relative;
+    }
+    
+    li {
+        list-style: none;
+        padding: .5em;
+    }
+}
 
 :root {
     --swiper-theme-color: #E27866;
 }
 
-
-body {
-    background-color: rgb(136, 136, 136);
-    max-width: 1400px;
-    margin: auto;
-    position: relative;
-}
-
-li {
-    list-style: none;
-    padding: .5em;
-}
-
 header {
     background-color: $color-darkgrey;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 1400px;
     box-sizing: border-box;
     height: $header-height;
     z-index: 2;
@@ -56,81 +62,69 @@ header {
 }
 
 main {
+    margin-top: $header-height;
+
     &>* {
-        padding: 0 30px;
+        padding: 0 5vw;
     }
-    margin-top: 72px;
-    
     
     section {
         padding-top: 50px;
         padding-bottom: 50px
 
     }
+    @media (max-width: $break-point5) {
+        section {
+            padding-top: 20px;
+            padding-bottom: 20px
+    
+        }
+    }
 
 }
 
 #hero {
-    background-position: center;
-    background-repeat: no-repeat;
     background: linear-gradient(
         rgba(28, 28, 28, .63), 
         rgba(28, 28, 28, .63)
       ),url('assets/photo-1480714378408-67cf0d13bc1b.png');
+    background-size: cover;
 
     article {
-        color: white;
-        h2 {
-            font-size: 36px;
-            font-weight: 600;
-        }
-
+        margin-bottom: 2em;
         p {
             opacity: .8;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        button {
-            background-color: transparent;
-            border: 2px solid white;
-            color:white;
-            font-size: 16px;
-            font-weight: 600;
-            padding: .5em 1em; 
-        }
+        } 
     }
 
-
+    @media (max-width: $break-point3){
+        .container.row{
+            flex-direction: column;
+        }
+    }
 }
 
-
-#features {
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 100%
-      ),url('assets/christoffer-engstrom-503481-unsplash.png');
-
-    .square {
-        height: 100px;
-        width: 100px;
-        background-color: $color-orange;
-        margin: 10px;
-        justify-content: center;
-        border-radius: 0;
-
-        div {
-            display: inline-block;
-            transform: rotate(-45deg);
-            transform-origin: center;
+#social {
+    @media (max-width: $break-point5) {
+        p {
+            display: none;
         }
     }
+}
+
+#features {
+    background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 100%
+      ),url('assets/christoffer-engstrom-503481-unsplash.png');
+    background-size: cover;
+
+    
 
     article {
         align-self: flex-start;
         justify-content: space-between;
         align-self: stretch;
         margin: 0 10px;
+        flex-basis: 50%;
     }
     .galery {
         margin: 0 20px;
@@ -147,8 +141,14 @@ main {
     }
 
     .swiper-slide {
-        padding-right: 150px;
+        padding-right: 10vw;
         box-sizing: border-box;
+    }
+
+    @media (max-width: $break-point5) {
+        .swiper-slide {
+            padding-right: 0;
+        }
     }
 }
 
@@ -157,6 +157,7 @@ main {
     article {
         margin-left: 20px;
         flex-basis: 450px;
+        flex-grow: 1;
         h2 {
             position: relative;
         }
@@ -171,6 +172,8 @@ main {
             margin-top: .25em;
         }
     }
+
+    
 }
 
 #bragging {
@@ -218,5 +221,81 @@ main {
 
     .underlined {
         border-bottom: 2px solid $color-orange;
+    }
+}
+
+// switch from features slide pagination to buttons
+
+@media (max-width: $break-point1) and (min-width: $break-point5 + 1px) {
+    #features {
+        .swiper-pagination {
+            display: none;
+        }
+
+        .swiper-slide {
+            padding-left: 40px;
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+
+        padding-left: 0;
+        padding-right: 0;
+        
+        
+    }
+}
+
+@media (min-width: $break-point1 + 1px) {
+    #features {
+        .swiper-buttons {
+            display: none;
+        }
+
+        .features-pagination {
+            height: 100px;
+            width: 100px;
+            background-color: $color-orange;
+            margin: 10px;
+            justify-content: center;
+            border-radius: 0;
+    
+            //rotate text insite pagination
+            div {
+                display: inline-block;
+                transform: rotate(-45deg);
+                transform-origin: center;
+            }
+        }
+    }
+}
+
+@media (max-width: $break-point5) {
+    #features {
+        .swiper-buttons {
+            display: none;
+        }
+
+        .features-pagination {
+            // height: 100px;
+            // width: 100px;
+            // background-color: $color-orange;
+            // margin: 10px;
+            // justify-content: center;
+            // border-radius: 0;
+    
+            //rotate text insite pagination
+            div {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: $break-point2) {
+    #features {
+        .swiper-slide {
+            flex-direction: column;
+        }
     }
 }

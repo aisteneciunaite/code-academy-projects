@@ -34,6 +34,14 @@
     flex-grow: 1;
 }
 
+.basis50 {
+    flex-basis: 50%
+}
+
+.al-center {
+    align-items: center;
+}
+
 /* background colors */
 
 .bkg-w {
@@ -136,7 +144,6 @@
         content:"Explore";
         background-color: rgba(226, 120, 102, .8);
         box-sizing: border-box;
-        padding-top: 90px;
         text-align: center;
         color: #FFFFFF;
         font-size: 20px;
@@ -147,13 +154,22 @@
         height: 100%;
         width: 100%;
         opacity: 0;
-        transition: .5s;      
+        transition: .5s;   
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;   
     }
     &:hover:after{
         opacity: 1;
     }
+}
 
-
-
-
+.button-transparent {
+    background-color: transparent;
+    border: 2px solid white;
+    color:white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: .5em 1em; 
 }

@@ -3,11 +3,18 @@
     padding: 0;
 }
 
-
-
-input, a {
+a {
     cursor: pointer;
 }
-button, label {
+input, button, label {
     cursor: pointer;
+}
+
+input, button, label {
+    outline: none;
+}
+
+
+#mobile-menu-btn {
+    display: none;
 }
