@@ -2,6 +2,7 @@ $color-green: #41D395;
 $color-blue: #6696E2;
 $color-orange: #E27866;
 $color-darkgrey: #1C1C1C;
+$base-font: 'Montserrat', sans-serif;
 $header-height: 72px;
 $max-width: 1400px;
 $break-point1: 900px; // Change feature slides navigation
@@ -26,10 +27,15 @@ html {
         padding: .5em;
         color:#86878B;
     }
+
+    input {
+        font-family: $base-font;
+    };
 }
 
 :root {
     --swiper-theme-color: #E27866;
+    font-family: $base-font;
 }
 
 header {

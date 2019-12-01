@@ -78,5 +78,79 @@ formToggleButton.addEventListener('click', function(){
   }
 })
 
+/* form validation */
+
+var submitButtons = document.querySelectorAll('input[type="button"]');
+var textInputs = document.querySelectorAll('input[type="text"], input[type="tel"]');
+var radioInputs = document.querySelectorAll('input[type="radio"]');
+
+
+submitButtons.forEach(element => {
+  element.addEventListener('click', submitForm)
+});
+
+textInputs.forEach(element => {
+  element.addEventListener('keydown', clearAlert)
+});
+
+radioInputs.forEach(element => {
+  element.addEventListener('click', clearAlert)
+});
+
+function submitForm() {
+  var radioButtonChecked = false;
+  var formFilled = true;
+  var form = this.parentElement;
+  formInputs = form.querySelectorAll('input[type="text"], input[type="tel"]');
+  radioButtons = form.querySelectorAll('input[type="radio"]');
+  
+  //Check if text fields are filled
+
+  formInputs.forEach(element => {
+    if (!element.value) {
+      if(!element.classList.contains('alert')) {
+        element.classList.add('alert')
+      }
+      if(formFilled) {formFilled = false}
+    }
+  });
+
+  //Check if radio button is selected
+  radioButtons.forEach(element => {
+    if(element.checked) {
+      radioButtonChecked=true;
+    }
+  })
+  
+  if(radioButtonChecked===false) {
+    var radioParent = radioButtons[0].parentElement;
+    if (!radioParent.classList.contains('alert')){
+    radioParent.classList.add('alert');
+    }
+  };
+
+  if (!formFilled ||!radioButtonChecked) {
+    alert('Please complete the form');
+  }
+  else {
+    //clear form
+    formInputs.forEach(element => {element.value=""});
+    radioButtons.forEach(element => {element.checked=false});
+
+    //end
+    alert('Thanks');
+  }
+};
+
+//clear alert highlights if form is being filled
+
+function clearAlert () {
+  if(this.classList.contains('alert')) {
+    this.classList.remove('alert');
+  }
+  else if(this.parentElement.classList.contains('alert')) {
+    this.parentElement.classList.remove('alert');
+  }
+}
 
 
