@@ -21,6 +21,10 @@
         background-color: $color-green;
         margin-top: 1em;
         }
+
+        p:last-of-type {
+            opacity: .5;
+        }
     }
 
     .popular:after {

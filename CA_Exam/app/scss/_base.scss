@@ -3,6 +3,7 @@ $color-blue: #6696E2;
 $color-orange: #E27866;
 $color-darkgrey: #1C1C1C;
 $header-height: 72px;
+$max-width: 1400px;
 $break-point1: 900px; // Change feature slides navigation
 $break-point2: 850px; // Change feature slides layout
 $break-point3: 800px; // Mobile & tablet layout
@@ -23,6 +24,7 @@ html {
     li {
         list-style: none;
         padding: .5em;
+        color:#86878B;
     }
 }
 
@@ -32,6 +34,7 @@ html {
 
 header {
     background-color: $color-darkgrey;
+    max-width: $max-width;
     position: fixed;
     top: 0;
     width: 100%;
@@ -92,6 +95,7 @@ main {
 
     article {
         margin-bottom: 2em;
+        margin-right: 1em;
         p {
             opacity: .8;
         } 
@@ -102,22 +106,41 @@ main {
             flex-direction: column;
         }
     }
+
+    h1 {
+        max-width: 426px;
+    }
+    h1:after {
+        content:"";
+        border-bottom: 2px solid  white;
+        width: 64px;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin-top: 1em;
+    }
 }
 
 #social {
+    p {
+        color: #86878B;
+    }
+
     @media (max-width: $break-point5) {
         p {
             display: none;
         }
+    }
+
+    img {
+        opacity: .65;
     }
 }
 
 #features {
     background: linear-gradient(90deg, rgba(226,120,102,0.42) 0%, rgba(102,150,226,0.42) 100%
       ),url('assets/christoffer-engstrom-503481-unsplash.png');
-    background-size: cover;
-
-    
+    background-size: cover;   
 
     article {
         align-self: flex-start;
@@ -129,15 +152,28 @@ main {
     .galery {
         margin: 0 20px;
 
+        img {
+            box-shadow: 0px 3px 6px #00000029;
+        }
+
         a {
             line-height: 0;
             margin: .5em;
         }
-
     }
 
     .swiper-pagination {
         position: relative;
+        
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #a37169;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $color-orange;
     }
 
     .swiper-slide {
@@ -158,18 +194,15 @@ main {
         margin-left: 20px;
         flex-basis: 450px;
         flex-grow: 1;
-        h2 {
-            position: relative;
-        }
 
-        h2:after {
+        h3:after {
             content:"";
             border-bottom: 2px solid  $color-orange;
             width: 200px;
             display: block;
             position: absolute;
             left: 0;
-            margin-top: .25em;
+            margin-top: 1em;
         }
     }
 
@@ -183,6 +216,9 @@ main {
     .card {
         max-width: 280px;
         align-items: center;
+    }
+    h2 + p, h4 + p {
+        color: #86878B
     }
 }
 
@@ -206,10 +242,23 @@ main {
         border: 1px solid var(--swiper-theme-color);
         opacity: 1;
         background-color: transparent;
+        margin: 0 10px;
     }
     
     .swiper-pagination-bullet-active {
         background-color: var(--swiper-theme-color);
+    }
+
+    .person {
+        img {
+            margin: 0 10px;
+        }
+    }
+    .person .col p:first-of-type{
+        font-size: 20px;
+    }
+    .person .col p:last-of-type{
+        color: #86878B
     }
     
 }
@@ -221,6 +270,18 @@ main {
 
     .underlined {
         border-bottom: 2px solid $color-orange;
+    }
+}
+
+footer {
+
+    .social-icons {
+        flex-basis: 500px;
+    }
+
+    padding: 40px;
+    span {
+        opacity: 0.5;
     }
 }
 
@@ -254,7 +315,6 @@ main {
         .features-pagination {
             height: 100px;
             width: 100px;
-            background-color: $color-orange;
             margin: 10px;
             justify-content: center;
             border-radius: 0;
@@ -271,18 +331,21 @@ main {
 
 @media (max-width: $break-point5) {
     #features {
+
+        .galery {
+            margin: 0;
+        }
         .swiper-buttons {
             display: none;
         }
 
+        .swiper-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            height: 50px; 
+        }
+
         .features-pagination {
-            // height: 100px;
-            // width: 100px;
-            // background-color: $color-orange;
-            // margin: 10px;
-            // justify-content: center;
-            // border-radius: 0;
-    
             //rotate text insite pagination
             div {
                 display: none;
