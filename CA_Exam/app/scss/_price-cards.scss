@@ -2,10 +2,13 @@
     border-radius: 5px;
     background-color: white;
     justify-self: space-between;
-    align-self: flex-start;
+    align-self: flex-end;
     text-align: center;
-    min-width: 300px;
-    margin:10px;
+    max-width: 343px;
+    min-width: 290px;
+    // flex-basis: 290px;
+    flex: 1;
+    margin: 20px;
     padding-bottom: 1em;
     
     .card-top {
@@ -46,5 +49,11 @@
     &:before {
         content: "$";
         font-size: 28px;
+    }
+}
+
+@media(max-width: 1100px-1px) {
+    .popular {
+        order: -1
     }
 }
