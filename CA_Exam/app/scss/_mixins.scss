@@ -65,16 +65,6 @@
     background-color: $color-blue;
 }
 
-/* section heights */
-
-// .sc-tall {
-//     min-height: 70vh;
-// }
-
-// .sc-medium {
-//     min-height: 55vh;
-// }
-
 /*Other*/
 
 .ta-center {
@@ -89,10 +79,8 @@
     max-width: 1200px;
     width: 100%;
     display: flex;
-    // justify-content: space-between;
     margin: 0 auto;
 }
-
 
 
 /*chat bubble class*/
@@ -163,5 +151,11 @@
     color:white;
     font-size: 16px;
     font-weight: 600;
-    padding: .5em 1em; 
+    padding: .5em 1em;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-color: transparent;
+        color: #1C1C1C;
+    }
 }

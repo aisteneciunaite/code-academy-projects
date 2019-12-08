@@ -28,8 +28,8 @@ html {
         color:#86878B;
     }
 
-    input {
-        font-family: $base-font;
+    input, button, label {
+        font-family: inherit;
     };
 }
 

@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
-    <title>Document</title>
+
+    <script src="script.js" defer></script>
+
+    
 </head>
+
 <body>
     <header class="row space-between al-center">
         <div class="container space-between">
             <img src="assets/cheshire-county-hygiene-services.svg" alt="Cheshire County logo">
-                <input type="checkbox" id="mobile-menu-btn">
-                <label class="menu-button" for="mobile-menu-btn" class="burger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </label>
-            <nav class="menu">
+            <div id="menu-button" class="menu-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="menu" id="menu">
                 <a href="#features" data-target="features">Features</a>
                 <a href="#about" data-target="about">About</a>
                 <a href="#pricing" data-target="pricing">Pricing</a>
                 <a href="#reviews" data-target="reviews">Reviews</a>
                 <a href="#contact" data-target="contact">Contact</a>
             </nav>
-
         </div>
     </header>
     <main>
@@ -400,11 +404,11 @@
 </body>
 
 
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script>
-        AOS.init();
+    AOS.init();
 </script>
-<script src="script.js"></script>
+
+
 </html>
